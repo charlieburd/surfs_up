@@ -31,6 +31,7 @@
 #### A. Wavy wanted this analysis to determine if the store would be sustainable year-round. The differences in temperature between June and Dec are minimal. I believe this supports the verdict, that yes, the store is sustainable year-round.
 
 #### While temperature swings will likely not affect the Surf and Ice Cream, it would be nice to know when they can expect rain. In the module we created at a yearly precipitation graph, but we can also modify our code to show the statistics description for precipitation between June and Dec. The average precipitation in June is .17 inches a day compared to an average of .22 inches a day for Dec. So A. Avery and I can clearly expect more rain in Dec, even though the average temperatures are pretty similar
+##### * Additional queries can be found in SurfsUp_Challenge
 
 #### June Precipitation Code
 `june2 = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6)`
