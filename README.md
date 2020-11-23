@@ -33,9 +33,9 @@
 #### While tempature swings will likely not affect the Surf and Ice Cream, it would be nice to know when they can expect rain. In the module we created at a yearly percipitation graph, but we can also modify our code to show the statistics decription for precipitation between June and Dec. The average percipitation in June is .17 inches a day compared to an average of .22 inches a day for Dec. So A. Avery and I can clearly expect more rain in Dec, even though the average tempatures are pretty similar
 
 #### June Precipitation Code
-`june2 = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6)
-june_list_prcp = [prcp for prcp in june2]`
+`june2 = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6)`
+`june_list_prcp = [prcp for prcp in june2]`
 
 #### Dec Precipitation Code
-`dec2 = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12)
-dec_list_prcp = [prcp for prcp in dec2]`
+`dec2 = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12)`
+`dec_list_prcp = [prcp for prcp in dec2]`
