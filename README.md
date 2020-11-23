@@ -14,6 +14,8 @@
 
  * The maximum tempature June and Dec are almost even. In June it reached a high of 85.0 degrees Fahrenheit. And in Dec it reached a high of 83.0 degrees Fahrenheit. A spread of only 2 degrees different. It is fair to say Oahu is not very seasonal, at least tempature wise.
  
+ * When we look at averages there is a very small different in temp between June and Dec in Oahu. The `decribe()` function also give us standard deviation (std), I think this is an important statistic because it shows which month is going to have a larger range of tempatures, and in return be harder to predict how busy the store will be. The std for June is 3.25 and the std for Dec is 3.74. So the tempature swings are both mininimal, but A. Wavy can expect that Dec will lead to a bit more uncertaintly compared to June.
+ 
  
 #### June Tempature Statistics
 ![stacked_launch_outcomes](https://github.com/charlieburd/surfs_up/blob/main/june_temps.png)
@@ -25,13 +27,14 @@
 
 ## Surfs Analysis Summary:
 
-### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-#### If we look at our "retiring_titles" tables, we get the count for each department, after we change the code to below, it will display the total amount of roles that will need to be filled. There are 90,398 roles that will need to be filled.
-`SELECT COUNT (title)
-FROM unique_titles;`
-### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-#### No, as I had mentioned in fourth bullet above, there will be a sever lack of mentors, given the large number of roles needed to be filled it would be a challenge to provide enough mentors for all the open roles, even if it were in groups. Some mentor to mentee ratio of departments will be as high as 1-60. To look at this table we will use the below code:
-`SELECT COUNT (title), title
-FROM mentorship_eligibility
-GROUP BY title
-ORDER BY count DESC;`
+#### A. Wavy wanted this analysis to determine if the store would be sustainable year round. The differences in tempature between June and Dec are minimal. I believes this supports the verdict, that yes, the store is sustainable year round.
+
+#### While tempature swings will likely not affect the Surf and Ice Cream, it would be nice to know when they can expect rain. In the module we created at a yearly percipitation graph, but we can also modify our code to show the statistics decription for precipitation between June and Dec. The average percipitation in June is .17 inches a day compared to an average of .22 inches a day for Dec. So A. Avery and I can clearly expect more rain in Dec, even though the average tempatures are pretty similar
+
+#### June Precipitation Code
+`june2 = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6)
+june_list_prcp = [prcp for prcp in june2]`
+
+#### Dec Precipitation Code
+`dec2 = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12)
+dec_list_prcp = [prcp for prcp in dec2]`
