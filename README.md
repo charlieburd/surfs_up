@@ -15,15 +15,15 @@
  * The maximum tempature June and Dec are almost even. In June it reached a high of 85.0 degrees Fahrenheit. And in Dec it reached a high of 83.0 degrees Fahrenheit. A spread of only 2 degrees different. It is fair to say Oahu is not very seasonal, at least tempature wise.
  
  
-#### Retirement Count by Title
-![stacked_launch_outcomes](https://github.com/charlieburd/pewlett_hackard_analysis/blob/main/png/retirement_count.png)
+#### June Tempature Statistics
+![stacked_launch_outcomes](https://github.com/charlieburd/surfs_up/blob/main/june_temps.png)
 
-#### Mentoring Count by Title
-![stacked_launch_outcomes](https://github.com/charlieburd/pewlett_hackard_analysis/blob/main/png/mentorship_count.png)
+#### Dec Tempature Statistics
+![stacked_launch_outcomes](https://github.com/charlieburd/surfs_up/blob/main/dec_temps.png)
 #
 
 
-## Pewlett Hackard Analysis Summary:
+## Surfs Analysis Summary:
 
 ### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 #### If we look at our "retiring_titles" tables, we get the count for each department, after we change the code to below, it will display the total amount of roles that will need to be filled. There are 90,398 roles that will need to be filled.
