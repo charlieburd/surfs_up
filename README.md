@@ -38,5 +38,6 @@
 `june_list_prcp = [prcp for prcp in june2]`
 
 #### Dec Precipitation Code
-`dec2 = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12)./
-dec_list_prcp = [prcp for prcp in dec2]`
+`dec2 = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12)`
+
+`dec_list_prcp = [prcp for prcp in dec2]`
